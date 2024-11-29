@@ -6,6 +6,7 @@ import {Tooltip} from "antd";
 const ScanCode2 = React.forwardRef(
     (
         props: {
+            onClose:Function
         },
         ref,
     ) => {
@@ -115,6 +116,9 @@ const ScanCode2 = React.forwardRef(
             if (topRef.current){
                 topRef.current.style.width = "0";
                 topRef.current.style.height = "0";
+            }
+            if (props.onClose){
+                props.onClose();
             }
         }
 

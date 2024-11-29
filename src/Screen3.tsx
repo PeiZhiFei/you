@@ -20,6 +20,10 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
             setDevice((prevSelectedIds) => [...prevSelectedIds, s]);
     };
 
+    const close = (id) => {
+        setDevice(device.filter(session => session !== id));
+    };
+
     const [previewOpen, setPreviewOpen] = useState(false);
 
     return (
@@ -74,6 +78,7 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
                 {device.map((id, index) => (
                     <ScanCode2
                         key={id}
+                        onClose={close(id)}
                     />
                 ))}
             </div>
