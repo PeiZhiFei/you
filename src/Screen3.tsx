@@ -16,8 +16,9 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
     }
 
     const addScanCode = () => {
-            const s = generateUniqueId();
-            setDevice((prevSelectedIds) => [...prevSelectedIds, s]);
+        console.warn("开始投屏")
+        const s = generateUniqueId();
+        setDevice((prevSelectedIds) => [...prevSelectedIds, s]);
     };
 
     const close = (id) => {
@@ -62,7 +63,7 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
                 justifyContent:'center'
             }}>
                 <Button style={{width: 80, height: 30, fontSize: 14, margin: '20px 20px',alignSelf:"center"}}
-                        onClick={(event) => {addScanCode()}}>开始投屏
+                        onClick={()=>addScanCode()}>开始投屏
                 </Button>
             </div>
 
@@ -75,12 +76,11 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
                 width: '100%',
                 // gap: '10px'
             }}>
-                {device.map((id, index) => (
+                {/*{device.map((id, index) => (*/}
                     <ScanCode2
-                        key={id}
-                        onClose={close(id)}
+                        // onClose={close(id)}
                     />
-                ))}
+                {/*))}*/}
             </div>
         </div>
     );
