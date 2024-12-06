@@ -76,11 +76,11 @@ const Screen3  = React.forwardRef((props: { size: number; }, ref,) => {
                 width: '100%',
                 // gap: '10px'
             }}>
-                {/*{device.map((id, index) => (*/}
+                {device.map((id, index) => (
                     <ScanCode2
                         // onClose={close(id)}
                     />
-                {/*))}*/}
+                ))}
             </div>
         </div>
     );
