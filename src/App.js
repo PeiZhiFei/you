@@ -1,6 +1,6 @@
 import './App.css';
-import Screen3 from "./Screen3.tsx";
-import Test from "./Test.tsx";
+// import Screen3 from "./Screen3.tsx";
+// import Test from "./Test.tsx";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Layout} from "antd";
 import ListPage from "./ListPage.tsx";
